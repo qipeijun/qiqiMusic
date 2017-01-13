@@ -1,0 +1,18 @@
+<ion-view view-title="qq音乐">
+    <ion-content>
+        <ul class="list">
+            <!--ng-click="getAudio(item.url)"-->
+            <li class="toplist item item-avatar item-button-right" ui-sref="play" ng-click="getUrl(item.url,item.albumpic_big,item.songid,item.songname,item.singername)"  collection-repeat="item in data">
+                <img ng-src="{{item.albumpic_small}}">
+                <h2>{{item.songname}}</h2>
+                <p>{{item.singername}}</p>
+                <button class="button button-clear"> <i class="balanced icon ion-headphone"></i></button>
+            </li>
+        </ul>
+    </ion-content>
+
+    <!--<ion-footer-bar>-->
+        <!--<audio id="play" src="" controls="controls" autoplay>-->
+        <!--</audio>-->
+    <!--</ion-footer-bar>-->
+</ion-view>

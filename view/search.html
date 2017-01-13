@@ -1,0 +1,44 @@
+<ion-view view-title="搜索">
+    <ion-content>
+
+        <ul class="list">
+
+            <div class=" item-input-inset">
+                <form style="width: 82%;" ng-submit="getValue()">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="search" id="searchVal" placeholder="搜索音乐、歌手">
+                    </label>
+                </form>
+
+                <button style="width: 18%;" class="button button-balanced button-small" ng-click="getValue()">
+                    搜索
+                </button>
+            </div>
+
+            <li class="item item-avatar" ng-repeat="item in data" ui-sref="play" ng-click="getUrl(item.m4a,item.albumpic_big,item.songid,item.songname,item.singername)">
+                <img ng-src="{{item.albumpic_small}}">
+                <h2>{{item.songname}}</h2>
+                <p>{{item.singername}}</p>
+            </li>
+
+        </ul>
+
+
+        <div ng-if="isHOT" class="hotSearch">
+            <h5>热门搜索</h5>
+
+            <a href="#">周杰伦周杰伦周杰伦</a>
+            <a href="#">死了都要爱</a>
+            <a href="#">周杰伦</a>
+            <a href="#">周杰伦</a>
+            <a href="#">周杰伦</a>
+
+        </div>
+
+
+
+
+
+    </ion-content>
+</ion-view>

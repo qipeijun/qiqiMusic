@@ -1,0 +1,48 @@
+<ion-view view-title="热门推荐">
+    <ion-content class="recom">
+
+        <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000">
+            <ion-slide>
+                <div>
+                    <img src="img/1.jpg" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <img src="img/2.jpg" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <img src="img/3.jpg" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <img src="img/4.jpg" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <img src="img/5.jpg" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide on-slide-changed="slideHasChanged(index)">
+                <div>
+                    <img src="img/3.jpg" alt="">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <h5>热门歌曲</h5>
+        <div class="row1">
+            <div class="col-501" ng-repeat="item in data" ui-sref="play" ng-click="getUrl(item.url,item.albumpic_big,item.songid,item.songname,item.singername)">
+                <img ng-src="{{item.albumpic_big}}">
+                <p>{{item.singername}}</p>
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

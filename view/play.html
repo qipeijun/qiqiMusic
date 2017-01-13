@@ -1,0 +1,67 @@
+
+<ion-view title="播放页">
+    <ion-content class="play">
+
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <img ng-src="{{obj.bigIMG}}">
+                <h2>{{obj.songname}}</h2>
+                <p>{{obj.singername}}</p>
+            </div>
+
+            <div class="item item-image" style="position:relative;">
+                <img class="playImg" ng-src="{{obj.bigIMG}}">
+
+                    <ul id="lrc"  >
+                        <li style="width: 100%;height: 40px;"></li>
+                        <li class="i{{key}}" ng-repeat="(key,value) in lrc track by $index"  ng-bind-html="value"></li>
+
+                    </ul>
+
+            </div>
+
+            <div class="playout item  assertive" >
+            
+                <div class="buttons plays" >
+                	<button class="button button-clear"><i class="icon assertive ion-ios-arrow-left"></i></button>
+                	<button class="button bf button-clear" >
+                		<i class="icon assertive ion-pause"></i>
+                	</button>
+                	<button class="button button-clear"><i class="icon assertive ion-ios-arrow-right"></i></button>
+                </div>
+                
+                <audio id="play" src="" controls="true" autoplay loop hidden="hidden">
+                </audio>
+            </div>
+        </div>
+        
+        <!--<script type="text/javascript">
+        	$(function(){
+        		$(".bf").click(function  () {
+        			var audio = document.getElementById("play")
+        			if (audio !=null) {
+        				if (audio.paused) {
+        					audio.play();
+        					$(".bf i").addClass('ion-play').removeClass('ion-pause')
+        				} else{
+        					audio.pause();
+        					$(".bf i").addClass('ion-pause').removeClass('ion-play')
+        				}
+        			}
+        		});
+        		
+        	})
+        </script>-->
+
+    </ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
